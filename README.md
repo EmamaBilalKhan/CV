@@ -1,2 +1,2 @@
 # CV
-For web course work
+CV for web course work
