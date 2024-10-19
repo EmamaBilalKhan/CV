@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: Arial, sans-serif;
+  width: auto;
+  background-color: white;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBelow {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+header {
+  width: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid black 1px;
+  animation: slideFromRight 1s ease-out;
+  animation-delay: 0.1s;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px 20px 0 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 20px 20px 20px;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Contact {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.Contact a {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0 50px;
+  text-decoration-color: black;
+  color: black;
+  position: relative;
+}
+
+.link-img {
+  height: 20px;
+  width: 20px;
+  left: -30px;
+  top: 1px;
+  position: absolute;
+}
+
+.About {
+  animation: slideFromBelow 1s ease-out;
+  animation-delay: 0.2s;
+}
+
+.Education {
+  border-bottom: solid black 1px;
+  width: auto;
+  padding-bottom: 10px;
+  animation: slideFromBelow 1s ease-out;
+  animation-delay: 0.4s;
+}
+
+.Education div {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.Education div > p {
+  margin-right: 30px;
+}
+
+.Experience {
+  animation: slideFromBelow 1s ease-out;
+  animation-delay: 0.6s;
+}
+
+.Experience > div {
+  margin-top: 20px;
+  padding: 0 30px 0 40px;
+  position: relative;
+}
+
+.Experience ul {
+  list-style: circle;
+  padding-left: 10px;
+}
+
+.Experience li {
+  margin-top: 10px;
+  position: relative;
+}
+
+.Experience h2::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  width: 8px;
+  height: 13px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(./assets/black-circle.png);
+}
+
+.Internship {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Skills {
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+  margin: 30px 0 0 0;
+}
+
+.Skills ul {
+  list-style: disc;
+  margin: 10px 20px 30px 30px;
+}
+
+.Skills li {
+  margin-bottom: 10px;
+}
+
+.courses {
+  padding: 10px 0 30px 0;
+}
+
+.courses ul {
+  list-style: disc;
+  margin: 10px 20px 0 30px;
+}
+
+.courses li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.courses span {
+  position: absolute;
+  right: 20px;
+}
+
+@media (max-width: 1050px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .Contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .Contact a {
+    font-size: 11px;
+    text-decoration-color: black;
+    color: black;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+
+  .link-img {
+    height: 10px;
+    width: 10px;
+    left: -15px;
+    top: 3px;
+  }
+
+  .Contact span {
+    display: none;
+  }
+
+  .Edu-year {
+    font-size: 15px;
+  }
+
+  .courses li {
+    font-size: 14px;
+  }
+}
